@@ -1,0 +1,90 @@
+4 layers
+application
+transport 
+network
+link
+
+link layer:
+	packets with headers saying the start and the destination.
+		data    	from  to
+	carry the data one link at a time.
+	wi-fi like local
+network: (layer 3
+	from end to end
+	network layer in the router tells the link layer where to go 
+	Special 	IP 	packets can be ruined
+	'route the data packets through various routers 
+
+physical layer above
+
+transport:
+	TCP  Transmission Control Protocol UDP user datagram protocol 	(not ensured)
+	ensure correctness by transmitting many times
+	
+application:
+	specific ways to transmit data, like syntax
+	http bit-torrent
+ABSTRACTION HERE like barriers
+
+http ftp
+tcp udp rtp	determines what to send 
+
+ip(single
+wifi 4g		how to send
+
+
+
+
+
+
+layer 3 
+network	IP service
+data 				hdr		 ip hdr		 link hdr
+property:
+	datagram
+	unreliable
+	best effort (drop the data when it feels such like it's full
+	connectionless(no pre-flow state don't know just do
+why  simple?
+	the end-to-end principle:where possible, implement features in 		the end hosts.
+	allow varieties of reliable services (or unreliable)
+details:
+	1.prevent looping forever (adding 'time to live' ttl 128-- when 0 	it drops it. ensure efficency.
+	2.fragment packets if they are too long
+	3.uses a header checksum to reduce chances of delivering 	datagram to ering destination
+	4.ipv4 32 bits  and ipv6 versions
+	5.new options to be added to header
+
+
+ip just ensures it could transmit, while tcp and above ensures more
+ip acts more like postman, while tcp like administration.
+the life of packets
+TCP byte stream
+	'TCP acts like a postmaster for internet communication. '
+	3-way handshake
+	'syc,syc ack, ack' 'CLIENT to SERVER'
+2 addresses  
+	ip & tcp port(server 80 usually)
+inside each hop
+	router has an address
+	and a forwarding table, find best suit patern for a particular packet
+	default route the least specific one 
+firstly 3 handshakes
+
+packet switching
+definition:independently for each arriving packet, pick its outgoing link. if the link is free, send it. Else hold the packet for later.
+self-routing
+the packet contains dest c b a
+simple one raises big security issues, so we store several in Switch dest&hop , so it checks
+a flow is a collection of datagrams belonging to the same end-to-end communication, e.g. a tcp connection.
+no per-flow state reaquired
+data traffic is bursty
+	-packet switching  allows flows o use all available link capacity
+	-allows flows to share link capacity.
+called Statiscal Multiplexing
+the idea is prevent from nuclear attacks!
+so efficiency and non-dependency
+---now dots, after pictures---
+
+
+

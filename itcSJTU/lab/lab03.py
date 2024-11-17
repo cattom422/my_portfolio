@@ -74,7 +74,7 @@ print(num1-num2)
 #现定义如下
 area=triangle_area
 def angle(a,b,c):
-    return angle_C(a,b,c),angle_C(a,c,b),angle_C(b.c.a)
+    return angle_C(a,b,c),angle_C(a,c,b),angle_C(b,c,a)
 circumangle=out_radius
 incircle=in_radius
 
@@ -87,5 +87,5 @@ def f(x1, y1, r1,  x2, y2, r2):
         return 0
     elif sum_radius==heart_distance or heart_distance==sub_radius:
         return 1
-    else sub_radius<heart_distance<sum_radius:
+    elif sub_radius<heart_distance<sum_radius:
         return 2
